@@ -1,3 +1,4 @@
+import sys
 import time
 import re
 import random
@@ -12,6 +13,7 @@ from selenium.webdriver.common.action_chains import ActionChains
 from selenium.common.exceptions import TimeoutException, NoSuchElementException
 import json
 import os
+import io
 from fake_useragent import UserAgent
 from urllib.parse import urlparse
 
@@ -677,7 +679,8 @@ def main():
             
             # Use the file that exists
             actual_bot_count_file = bot_count_file if os.path.exists(bot_count_file) else bot_count_file_no_ext
-            print(f"🎯 Multi-bot mode detected! Using: {actual_bot_count_file}")
+            # Line 680 - Remove Unicode arrow and use ASCII
+            print(f"[TARGET] Multi-bot mode detected! Using: {actual_bot_count_file}")
             
             bot_manager = BotManager()
             all_session_logs = bot_manager.run_distributed_bots(urls, stay_duration)
