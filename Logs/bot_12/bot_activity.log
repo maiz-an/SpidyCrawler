@@ -1,0 +1,11 @@
+TIMESTAMP             | BOT  | MESSAGE
+----------------------+------+--------------------------------------------------
+2026-01-31 22:34:21,985  | 12   | Could not detect IP/country: Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED |   (Session info: chrome=144.0.7559.110) | Stacktrace: | Symbols not available. Dumping unresolved backtrace: | 	0x7ff6172da535 | 	0x7ff6172da590 | 	0x7ff6170810bd | 	0x7ff61707dbe4 | 	0x7ff61706e071 | 	0x7ff61706ff5f | 	0x7ff61706e611 | 	0x7ff61706dddb | 	0x7ff61706da91 | 	0x7ff61706b6a7 | 	0x7ff61706be22 | 	0x7ff617085366 | 	0x7ff61712ad54 | 	0x7ff617105a3a | 	0x7ff617129ef5 | 	0x7ff6170ccc9c | 	0x7ff6170cdbe3 | 	0x7ff6175b7b60 | 	0x7ff6175b1f5d | 	0x7ff6175d311a | 	0x7ff6172f60a5 | 	0x7ff6172fe73c | 	0x7ff6172e3844 | 	0x7ff6172e39f6 | 	0x7ff6172c9a07 | 	0x7ff8556fe8d7 | 	0x7ff855f8c40c | 
+2026-01-31 22:34:21,986  | 12   | Bot started. Visiting 3 page(s). (IP/country above.)
+2026-01-31 22:34:21,986  | 12   | Starting. Will visit 3 page(s), 100 seconds per page.
+2026-01-31 22:34:21,986  | 12   | Page 1 of 3.
+2026-01-31 22:34:21,987  | 12   | Opening page: https://maizan.me/
+2026-01-31 22:34:21,987  | 12   | Will stay on this page for 100 seconds.
+2026-01-31 22:34:57,097  | 12   | Something went wrong on this page: Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED |   (Session info: chrome=144.0.7559.110) | Stacktrace: | Symbols not available. Dumping unresolved backtrace: | 	0x7ff6172da535 | 	0x7ff6172da590 | 	0x7ff6170810bd | 	0x7ff61707dbe4 | 	0x7ff61706e071 | 	0x7ff61706ff5f | 	0x7ff61706e611 | 	0x7ff61706dddb | 	0x7ff61706da91 | 	0x7ff61706b6a7 | 	0x7ff61706be22 | 	0x7ff617085366 | 	0x7ff61712ad54 | 	0x7ff617105a3a | 	0x7ff617129ef5 | 	0x7ff6170ccc9c | 	0x7ff6170cdbe3 | 	0x7ff6175b7b60 | 	0x7ff6175b1f5d | 	0x7ff6175d311a | 	0x7ff6172f60a5 | 	0x7ff6172fe73c | 	0x7ff6172e3844 | 	0x7ff6172e39f6 | 	0x7ff6172c9a07 | 	0x7ff8556fe8d7 | 	0x7ff855f8c40c | 
+2026-01-31 22:34:57,098  | 12   | Page 2 of 3.
+2026-01-31 22:34:57,098  | 12   | Waiting a bit before next page (like a real user).

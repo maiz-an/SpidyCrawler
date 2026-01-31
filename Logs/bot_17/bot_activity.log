@@ -1,0 +1,72 @@
+TIMESTAMP             | BOT  | MESSAGE
+----------------------+------+--------------------------------------------------
+2026-01-31 22:30:57,877  | 17   | === This bot is using: IP 38.7.221.191 | Country: CL ===
+2026-01-31 22:30:57,877  | 17   | (Your site analytics will show this IP and country as a visitor)
+2026-01-31 22:30:57,878  | 17   | Bot started. Visiting 3 page(s). (IP/country above.)
+2026-01-31 22:30:57,878  | 17   | Starting. Will visit 3 page(s), 100 seconds per page.
+2026-01-31 22:30:57,878  | 17   | Page 1 of 3.
+2026-01-31 22:30:57,878  | 17   | Opening page: https://maizan.me/
+2026-01-31 22:30:57,879  | 17   | Will stay on this page for 100 seconds.
+2026-01-31 22:32:11,529  | 17   | Page redirected to a different address. Trying original URL again.
+2026-01-31 22:32:11,529  | 17   | Going back to the original page...
+2026-01-31 22:33:21,637  | 17   | Still on a different page after redirect.
+2026-01-31 22:33:21,638  | 17   | Action plan calculated: {'initial_load_delay': (5, 15), 'scroll_sessions': 2, 'click_sessions': 2, 'mouse_movement_sessions': 2, 'break_duration_range': (10, 30), 'action_delay_range': (1, 3)}
+2026-01-31 22:33:21,638  | 17   | Waiting a few seconds (like a real user), then browsing...
+2026-01-31 22:33:31,784  | 17   | Browsing round 1 — about 99 seconds left on this page.
+2026-01-31 22:33:31,839  | 17   | Doing 6 actions this round (scroll, click, move mouse).
+2026-01-31 22:33:31,840  | 17   | Action: mouse movements 2
+2026-01-31 22:33:31,840  | 17   | Moving mouse around the page (like a real user)
+2026-01-31 22:33:35,214  | 17   | Done moving mouse.
+2026-01-31 22:33:37,975  | 17   | Action: scrolling 1
+2026-01-31 22:33:37,975  | 17   | Scrolling the page up and down
+2026-01-31 22:33:45,376  | 17   | Done scrolling.
+2026-01-31 22:33:47,986  | 17   | Action: clicking 2
+2026-01-31 22:33:47,986  | 17   | Looking for links and buttons to click...
+2026-01-31 22:33:48,359  | 17   | Found 15 links or buttons.
+2026-01-31 22:33:48,359  | 17   | Clicking 1 of them (like a real visitor).
+2026-01-31 22:33:50,926  | 17   | Clicked: mzieO's
+2026-01-31 22:33:55,613  | 17   | Action: mouse movements 1
+2026-01-31 22:33:55,613  | 17   | Moving mouse around the page (like a real user)
+2026-01-31 22:33:59,998  | 17   | Action: scrolling 2
+2026-01-31 22:33:59,998  | 17   | Scrolling the page up and down
+2026-01-31 22:34:07,786  | 17   | Done scrolling.
+2026-01-31 22:34:09,551  | 17   | Action: clicking 1
+2026-01-31 22:34:09,552  | 17   | Looking for links and buttons to click...
+2026-01-31 22:34:09,798  | 17   | Found 15 links or buttons.
+2026-01-31 22:34:09,799  | 17   | Clicking 1 of them (like a real visitor).
+2026-01-31 22:34:12,167  | 17   | Clicked: (link/button)
+2026-01-31 22:34:16,091  | 17   | Short pause (like a real user), then continuing.
+2026-01-31 22:34:31,748  | 17   | Browsing round 2 — about 40 seconds left on this page.
+2026-01-31 22:34:31,805  | 17   | Doing 6 actions this round (scroll, click, move mouse).
+2026-01-31 22:34:31,805  | 17   | Action: clicking 2
+2026-01-31 22:34:31,806  | 17   | Looking for links and buttons to click...
+2026-01-31 22:34:32,001  | 17   | Found 8 links or buttons.
+2026-01-31 22:34:32,002  | 17   | Clicking 2 of them (like a real visitor).
+2026-01-31 22:34:33,796  | 17   | Clicked: (link/button)
+2026-01-31 22:34:39,405  | 17   | Clicked: < | Home
+2026-01-31 22:34:47,047  | 17   | Action: mouse movements 1
+2026-01-31 22:34:47,048  | 17   | Moving mouse around the page (like a real user)
+2026-01-31 22:34:49,897  | 17   | Action: scrolling 1
+2026-01-31 22:34:49,897  | 17   | Scrolling the page up and down
+2026-01-31 22:34:57,641  | 17   | Done scrolling.
+2026-01-31 22:34:59,345  | 17   | Action: mouse movements 2
+2026-01-31 22:34:59,346  | 17   | Moving mouse around the page (like a real user)
+2026-01-31 22:35:00,747  | 17   | Action: scrolling 2
+2026-01-31 22:35:00,747  | 17   | Scrolling the page up and down
+2026-01-31 22:35:08,425  | 17   | Done scrolling.
+2026-01-31 22:35:10,240  | 17   | Action: clicking 1
+2026-01-31 22:35:10,240  | 17   | Looking for links and buttons to click...
+2026-01-31 22:35:10,433  | 17   | Found 15 links or buttons.
+2026-01-31 22:35:10,434  | 17   | Clicking 2 of them (like a real visitor).
+2026-01-31 22:35:13,040  | 17   | Clicked: (link/button)
+2026-01-31 22:35:17,171  | 17   | Clicked: (link/button)
+2026-01-31 22:35:19,759  | 17   | Short on time — skipping short pause.
+2026-01-31 22:35:19,759  | 17   | No pause — almost done.
+2026-01-31 22:35:19,759  | 17   | Done with this page. Time spent: 107 sec, actions done: 12.
+2026-01-31 22:35:19,760  | 17   | Page 2 of 3.
+2026-01-31 22:35:19,760  | 17   | Waiting a bit before next page (like a real user).
+2026-01-31 22:38:05,667  | 17   | Opening page: https://example.com/
+2026-01-31 22:38:05,669  | 17   | Will stay on this page for 100 seconds.
+2026-01-31 22:38:40,458  | 17   | Something went wrong on this page: Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED |   (Session info: chrome=144.0.7559.110) | Stacktrace: | Symbols not available. Dumping unresolved backtrace: | 	0x7ff6172da535 | 	0x7ff6172da590 | 	0x7ff6170810bd | 	0x7ff61707dbe4 | 	0x7ff61706e071 | 	0x7ff61706ff5f | 	0x7ff61706e611 | 	0x7ff61706dddb | 	0x7ff61706da91 | 	0x7ff61706b6a7 | 	0x7ff61706be22 | 	0x7ff617085366 | 	0x7ff61712ad54 | 	0x7ff617105a3a | 	0x7ff617129ef5 | 	0x7ff6170ccc9c | 	0x7ff6170cdbe3 | 	0x7ff6175b7b60 | 	0x7ff6175b1f5d | 	0x7ff6175d311a | 	0x7ff6172f60a5 | 	0x7ff6172fe73c | 	0x7ff6172e3844 | 	0x7ff6172e39f6 | 	0x7ff6172c9a07 | 	0x7ff8556fe8d7 | 	0x7ff855f8c40c | 
+2026-01-31 22:38:40,461  | 17   | Page 3 of 3.
+2026-01-31 22:38:40,462  | 17   | Waiting a bit before next page (like a real user).

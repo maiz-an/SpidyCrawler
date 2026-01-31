@@ -1,0 +1,5 @@
+Step	Time	What happened
+-----	------	--------------------------------------------------
+1	22:41:17	Selenium-wire starting, proxy: http://158.101.1.100:42171
+2	22:41:19	Proxy OK -> http://158.101.1.100:42171
+3	22:41:19	Browser ready. Stay time per page: 100 s (no GUI).

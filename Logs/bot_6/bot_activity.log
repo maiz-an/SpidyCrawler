@@ -1,0 +1,29 @@
+TIMESTAMP             | BOT  | MESSAGE
+----------------------+------+--------------------------------------------------
+2026-01-31 22:38:11,065  | 6    | Could not detect IP/country: Expecting value: line 1 column 1 (char 0)
+2026-01-31 22:38:11,095  | 6    | Bot started. Visiting 3 page(s). (IP/country above.)
+2026-01-31 22:38:11,096  | 6    | Starting. Will visit 3 page(s), 100 seconds per page.
+2026-01-31 22:38:11,097  | 6    | Page 1 of 3.
+2026-01-31 22:38:11,098  | 6    | Opening page: https://maizan.me/
+2026-01-31 22:38:11,099  | 6    | Will stay on this page for 100 seconds.
+2026-01-31 22:38:11,562  | 6    | Page loaded correctly.
+2026-01-31 22:38:11,564  | 6    | Action plan calculated: {'initial_load_delay': (5, 15), 'scroll_sessions': 2, 'click_sessions': 1, 'mouse_movement_sessions': 2, 'break_duration_range': (10, 30), 'action_delay_range': (1, 3)}
+2026-01-31 22:38:11,565  | 6    | Waiting a few seconds (like a real user), then browsing...
+2026-01-31 22:38:23,512  | 6    | Browsing round 1 — about 99 seconds left on this page.
+2026-01-31 22:38:23,565  | 6    | Doing 5 actions this round (scroll, click, move mouse).
+2026-01-31 22:38:23,566  | 6    | Action: mouse movements 1
+2026-01-31 22:38:23,567  | 6    | Moving mouse around the page (like a real user)
+2026-01-31 22:38:27,919  | 6    | Done moving mouse.
+2026-01-31 22:38:29,482  | 6    | Action: scrolling 2
+2026-01-31 22:38:29,484  | 6    | Scrolling the page up and down
+2026-01-31 22:38:37,973  | 6    | Done scrolling.
+2026-01-31 22:38:40,970  | 6    | Action: clicking 1
+2026-01-31 22:38:40,972  | 6    | Looking for links and buttons to click...
+2026-01-31 22:38:41,009  | 6    | Found 0 links or buttons.
+2026-01-31 22:38:41,010  | 6    | No links or buttons found on this page.
+2026-01-31 22:38:42,124  | 6    | Action: scrolling 1
+2026-01-31 22:38:42,126  | 6    | Scrolling the page up and down
+2026-01-31 22:38:49,011  | 6    | Done scrolling.
+2026-01-31 22:38:50,213  | 6    | Action: mouse movements 2
+2026-01-31 22:38:50,215  | 6    | Moving mouse around the page (like a real user)
+2026-01-31 22:38:55,601  | 6    | Short pause (like a real user), then continuing.

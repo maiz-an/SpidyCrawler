@@ -1,0 +1,9 @@
+Step	Time	What happened
+-----	------	--------------------------------------------------
+1	22:38:07	Selenium-wire starting, proxy: http://204.188.206.175:80
+2	22:38:09	Proxy OK -> http://204.188.206.175:80
+3	22:38:09	Browser ready. Stay time per page: 100 s (no GUI).
+4	22:38:11	Could not detect IP/country: Expecting value: line 1 column 1 (char 0)
+5	22:38:11	Bot started. Visiting 3 page(s), 100 s per page.
+6	22:38:11	Opening page: https://maizan.me/
+7	22:38:11	Page loaded correctly.

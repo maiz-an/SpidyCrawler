@@ -1,0 +1,43 @@
+{
+  "session_start": "2026-01-31T22:30:46.099694",
+  "total_urls": 3,
+  "scheduled_duration_per_url": 100,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/118.0",
+  "visits": [
+    {
+      "url": "https://maizan.me/",
+      "start_time": "2026-01-31T22:30:46.100168",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/118.0",
+      "scheduled_duration": 100,
+      "verification_detected": false,
+      "actions_performed": [],
+      "status": "error",
+      "error": "Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED\n  (Session info: chrome=144.0.7559.110)\nStacktrace:\nSymbols not available. Dumping unresolved backtrace:\n\t0x7ff6172da535\n\t0x7ff6172da590\n\t0x7ff6170810bd\n\t0x7ff61707dbe4\n\t0x7ff61706e071\n\t0x7ff61706ff5f\n\t0x7ff61706e611\n\t0x7ff61706dddb\n\t0x7ff61706da91\n\t0x7ff61706b6a7\n\t0x7ff61706be22\n\t0x7ff617085366\n\t0x7ff61712ad54\n\t0x7ff617105a3a\n\t0x7ff617129ef5\n\t0x7ff6170ccc9c\n\t0x7ff6170cdbe3\n\t0x7ff6175b7b60\n\t0x7ff6175b1f5d\n\t0x7ff6175d311a\n\t0x7ff6172f60a5\n\t0x7ff6172fe73c\n\t0x7ff6172e3844\n\t0x7ff6172e39f6\n\t0x7ff6172c9a07\n\t0x7ff8556fe8d7\n\t0x7ff855f8c40c\n"
+    },
+    {
+      "url": "https://example.com/",
+      "start_time": "2026-01-31T22:34:33.569084",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/118.0",
+      "scheduled_duration": 100,
+      "verification_detected": false,
+      "actions_performed": [],
+      "status": "error",
+      "error": "Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED\n  (Session info: chrome=144.0.7559.110)\nStacktrace:\nSymbols not available. Dumping unresolved backtrace:\n\t0x7ff6172da535\n\t0x7ff6172da590\n\t0x7ff6170810bd\n\t0x7ff61707dbe4\n\t0x7ff61706e071\n\t0x7ff61706ff5f\n\t0x7ff61706e611\n\t0x7ff61706dddb\n\t0x7ff61706da91\n\t0x7ff61706b6a7\n\t0x7ff61706be22\n\t0x7ff617085366\n\t0x7ff61712ad54\n\t0x7ff617105a3a\n\t0x7ff617129ef5\n\t0x7ff6170ccc9c\n\t0x7ff6170cdbe3\n\t0x7ff6175b7b60\n\t0x7ff6175b1f5d\n\t0x7ff6175d311a\n\t0x7ff6172f60a5\n\t0x7ff6172fe73c\n\t0x7ff6172e3844\n\t0x7ff6172e39f6\n\t0x7ff6172c9a07\n\t0x7ff8556fe8d7\n\t0x7ff855f8c40c\n"
+    },
+    {
+      "url": "https://www.wikipedia.org/",
+      "start_time": "2026-01-31T22:38:55.616560",
+      "user_agent": "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/118.0",
+      "scheduled_duration": 100,
+      "verification_detected": false,
+      "actions_performed": [],
+      "status": "error",
+      "error": "Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED\n  (Session info: chrome=144.0.7559.110)\nStacktrace:\nSymbols not available. Dumping unresolved backtrace:\n\t0x7ff6172da535\n\t0x7ff6172da590\n\t0x7ff6170810bd\n\t0x7ff61707dbe4\n\t0x7ff61706e071\n\t0x7ff61706ff5f\n\t0x7ff61706e611\n\t0x7ff61706dddb\n\t0x7ff61706da91\n\t0x7ff61706b6a7\n\t0x7ff61706be22\n\t0x7ff617085366\n\t0x7ff61712ad54\n\t0x7ff617105a3a\n\t0x7ff617129ef5\n\t0x7ff6170ccc9c\n\t0x7ff6170cdbe3\n\t0x7ff6175b7b60\n\t0x7ff6175b1f5d\n\t0x7ff6175d311a\n\t0x7ff6172f60a5\n\t0x7ff6172fe73c\n\t0x7ff6172e3844\n\t0x7ff6172e39f6\n\t0x7ff6172c9a07\n\t0x7ff8556fe8d7\n\t0x7ff855f8c40c\n"
+    }
+  ],
+  "session_end": "2026-01-31T22:39:51.261653",
+  "bot_id": 9,
+  "bot_logs_dir": "G:\\GitHubRep\\SpidyCrawler\\Logs\\bot_9",
+  "bot_ip": "unknown",
+  "bot_country": "unknown"
+}

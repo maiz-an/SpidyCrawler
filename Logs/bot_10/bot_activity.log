@@ -1,0 +1,51 @@
+TIMESTAMP             | BOT  | MESSAGE
+----------------------+------+--------------------------------------------------
+2026-01-31 22:30:27,705  | 10   | Could not detect IP/country: Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED |   (Session info: chrome=144.0.7559.110) | Stacktrace: | Symbols not available. Dumping unresolved backtrace: | 	0x7ff6172da535 | 	0x7ff6172da590 | 	0x7ff6170810bd | 	0x7ff61707dbe4 | 	0x7ff61706e071 | 	0x7ff61706ff5f | 	0x7ff61706e611 | 	0x7ff61706dddb | 	0x7ff61706da91 | 	0x7ff61706b6a7 | 	0x7ff61706be22 | 	0x7ff617085366 | 	0x7ff61712ad54 | 	0x7ff617105a3a | 	0x7ff617129ef5 | 	0x7ff6170ccc9c | 	0x7ff6170cdbe3 | 	0x7ff6175b7b60 | 	0x7ff6175b1f5d | 	0x7ff6175d311a | 	0x7ff6172f60a5 | 	0x7ff6172fe73c | 	0x7ff6172e3844 | 	0x7ff6172e39f6 | 	0x7ff6172c9a07 | 	0x7ff8556fe8d7 | 	0x7ff855f8c40c | 
+2026-01-31 22:30:27,707  | 10   | Bot started. Visiting 3 page(s). (IP/country above.)
+2026-01-31 22:30:27,707  | 10   | Starting. Will visit 3 page(s), 100 seconds per page.
+2026-01-31 22:30:27,707  | 10   | Page 1 of 3.
+2026-01-31 22:30:27,708  | 10   | Opening page: https://maizan.me/
+2026-01-31 22:30:27,708  | 10   | Will stay on this page for 100 seconds.
+2026-01-31 22:30:57,788  | 10   | Page loaded correctly.
+2026-01-31 22:30:57,788  | 10   | Action plan calculated: {'initial_load_delay': (5, 15), 'scroll_sessions': 1, 'click_sessions': 1, 'mouse_movement_sessions': 1, 'break_duration_range': (10, 30), 'action_delay_range': (1, 3)}
+2026-01-31 22:30:57,788  | 10   | Waiting a few seconds (like a real user), then browsing...
+2026-01-31 22:31:06,969  | 10   | Browsing round 1 — about 99 seconds left on this page.
+2026-01-31 22:31:16,398  | 10   | Doing 3 actions this round (scroll, click, move mouse).
+2026-01-31 22:31:16,399  | 10   | Action: mouse movements 1
+2026-01-31 22:31:16,399  | 10   | Moving mouse around the page (like a real user)
+2026-01-31 22:31:31,657  | 10   | Action: clicking 1
+2026-01-31 22:31:31,657  | 10   | Looking for links and buttons to click...
+2026-01-31 22:31:43,616  | 10   | Found 0 links or buttons.
+2026-01-31 22:31:43,616  | 10   | No links or buttons found on this page.
+2026-01-31 22:31:45,897  | 10   | Action: scrolling 1
+2026-01-31 22:31:45,897  | 10   | Scrolling the page up and down
+2026-01-31 22:32:07,323  | 10   | Done scrolling.
+2026-01-31 22:32:09,687  | 10   | Short pause (like a real user), then continuing.
+2026-01-31 22:32:39,514  | 10   | Browsing round 2 — about 7 seconds left on this page.
+2026-01-31 22:32:39,551  | 10   | Doing 3 actions this round (scroll, click, move mouse).
+2026-01-31 22:32:39,551  | 10   | Action: clicking 1
+2026-01-31 22:32:39,551  | 10   | Looking for links and buttons to click...
+2026-01-31 22:32:39,578  | 10   | Found 0 links or buttons.
+2026-01-31 22:32:39,578  | 10   | No links or buttons found on this page.
+2026-01-31 22:32:42,352  | 10   | Action: mouse movements 1
+2026-01-31 22:32:42,353  | 10   | Moving mouse around the page (like a real user)
+2026-01-31 22:32:44,063  | 10   | Action: scrolling 1
+2026-01-31 22:32:44,063  | 10   | Scrolling the page up and down
+2026-01-31 22:32:49,907  | 10   | Done scrolling.
+2026-01-31 22:32:49,907  | 10   | Short on time — skipping short pause.
+2026-01-31 22:32:49,907  | 10   | No pause — almost done.
+2026-01-31 22:32:49,907  | 10   | Done with this page. Time spent: 102 sec, actions done: 6.
+2026-01-31 22:32:49,908  | 10   | Page 2 of 3.
+2026-01-31 22:32:49,908  | 10   | Waiting a bit before next page (like a real user).
+2026-01-31 22:37:47,460  | 10   | Opening page: https://example.com/
+2026-01-31 22:37:47,461  | 10   | Will stay on this page for 100 seconds.
+2026-01-31 22:38:17,495  | 10   | Page loaded correctly.
+2026-01-31 22:38:17,496  | 10   | Action plan calculated: {'initial_load_delay': (5, 15), 'scroll_sessions': 1, 'click_sessions': 1, 'mouse_movement_sessions': 1, 'break_duration_range': (10, 30), 'action_delay_range': (1, 3)}
+2026-01-31 22:38:17,497  | 10   | Waiting a few seconds (like a real user), then browsing...
+2026-01-31 22:38:31,340  | 10   | Browsing round 1 — about 99 seconds left on this page.
+2026-01-31 22:38:37,042  | 10   | Doing 3 actions this round (scroll, click, move mouse).
+2026-01-31 22:38:37,044  | 10   | Action: scrolling 1
+2026-01-31 22:38:37,045  | 10   | Scrolling the page up and down
+2026-01-31 22:39:02,824  | 10   | Done scrolling.
+2026-01-31 22:39:04,471  | 10   | Action: clicking 1
+2026-01-31 22:39:04,472  | 10   | Looking for links and buttons to click...

@@ -1,0 +1,11 @@
+Step	Time	What happened
+-----	------	--------------------------------------------------
+1	22:36:14	Selenium-wire starting, proxy: http://80.78.73.120:65530
+2	22:36:16	Proxy OK -> http://80.78.73.120:65530
+3	22:36:16	Browser ready. Stay time per page: 100 s (no GUI).
+4	22:36:25	Could not detect IP/country: Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
+5	22:36:25	Bot started. Visiting 3 page(s), 100 s per page.
+6	22:36:25	Opening page: https://maizan.me/
+7	22:36:44	Something went wrong on this page: Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
+8	22:38:26	Opening page: https://example.com/
+9	22:38:40	Something went wrong on this page: Message: unknown error: net::ERR_TUNNEL_CONNECTION_FAILED
