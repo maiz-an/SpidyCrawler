@@ -1,215 +1,163 @@
 # SpidyCrawler - Synthetic Web Traffic Agent v1.2
 
-![Python](https://img.shields.io/badge/Python-3.11%2B-blue)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-lightgrey)
 ![License](https://img.shields.io/badge/License-Educational-green)
 ![Status](https://img.shields.io/badge/Status-Active-success)
 
-*“Simulate real users, understand real behavior, optimize real performance.”*
+*"Simulate real users, understand real behavior, optimize real performance."*
 
-A sophisticated Python-based web traffic bot that simulates human-like browsing sessions to visit websites with natural interactions.
+A Python-based web traffic bot that simulates human-like browsing. **All bots start at once** — no batching, no cap on count (10, 100, 10k+). Uses proxies for different IPs/locations; optional free proxy auto-fetch.
 
 ## 📁 Project Structure
 
 ```
 SpidyCrawler/
-├── runBot.bat                                  # Perfect launcher
-├── Source/
-│   ├── __pycache__/                            # Cache
-│   ├── SC_BOT.py                              # Updated for multi-bot
-│   └── bot_manager.py                          # Unlimited scaling
+├── run.py                    # One-file launcher (setup + run)
+├── runBot.bat                # Double-click launcher (Windows)
+├── delete_logs.bat           # Force-delete Logs folder (run after closing IDE/bot)
+├── source/
+│   ├── SC_BOT.py             # Core bot + human-like behavior
+│   ├── bot_manager.py         # Multi-bot runner (unlimited scale)
+│   ├── theme.py              # Console theme + log prefixes
+│   ├── proxy_fetcher.py      # Fetch free proxies (optional)
+│   └── requirements.txt      # Python dependencies
 ├── Customize/
-│   ├── urls.txt
-│   ├── spend_time.txt
-│   └── bot_count.txt                           # Your bot count (49, 100, 1000, etc.)
-└── Logs/
-    ├── bot_1/                                  # Individual bot logs
+│   ├── urls.txt              # Target URLs (one per line)
+│   ├── spend_time.txt        # Seconds per page (60–86400)
+│   ├── bot_count.txt         # Number of bots (1 = single, 2+ = all start together)
+│   ├── proxies.txt           # Proxies (optional; empty = auto-fetch or no proxy)
+│   └── proxies.txt.example   # Example format
+├── .github/workflows/
+│   └── seo-bot.yml           # GitHub Action – manual run only (no auto on push)
+└── Logs/                     # Created per run; table + step logs per bot
+    ├── bot_1/
+    │   ├── bot_activity.log  # Table: TIMESTAMP | BOT | MESSAGE
+    │   ├── steps.log         # Step | Time | What happened
+    │   ├── ip_country.txt    # IP and country for this bot
+    │   └── session_final.json
     ├── bot_2/
-    └── ... (as many as bot_count.txt)
+    └── ...
 ```
 
-## 🚀 Quick Start – One File Does Everything
+## 🚀 Quick Start
 
-1. **Double-click** `runBot.bat` (or run `python run.py` from the project folder).
-2. The first run will automatically:
-   - Create `Customize/` and default config files (`urls.txt`, `spend_time.txt`, `bot_count.txt`) if missing
-   - Install dependencies (`pip install -r source/requirements.txt`)
-   - Fetch free proxies if `proxies.txt` is empty
+1. **Double-click** `runBot.bat` or run `python run.py` from the project folder.
+2. First run will automatically:
+   - Create `Customize/` and default config files if missing
+   - Upgrade pip and install dependencies (`source/requirements.txt`)
+   - Pin `blinker==1.7.0` and install `selenium-wire` (for proxies)
+   - Fetch free proxies if `Customize/proxies.txt` is empty
+   - Remove old `Logs/` (or skip if files in use)
    - Start the bot(s)
 
-No manual setup. Edit `Customize/urls.txt` (and other files) after the first run if you want to change targets or bot count.
+No manual setup. Edit `Customize/urls.txt`, `spend_time.txt`, and `bot_count.txt` after the first run.
 
-### Run on another PC (auto setup, auto config, auto download)
+### Run on Another PC (auto setup, auto config, auto download)
 
-1. Copy the whole SpidyCrawler folder to the other PC (or clone the repo).
-2. On that PC install **Python 3.8+** ([python.org](https://python.org)) and **Chrome** (for headless browsing). Add Python to PATH when installing.
+1. Copy the SpidyCrawler folder (or clone the repo).
+2. Install **Python 3.8+** ([python.org](https://python.org)) and **Chrome**. Add Python to PATH.
 3. Double-click **runBot.bat** (or run `python run.py`).
-4. First run will automatically: upgrade pip, install dependencies (with one retry), pin blinker for selenium-wire, create default config if missing, fetch free proxies if `proxies.txt` is empty, then start the bot(s). No manual pip or config steps needed.
+4. First run: upgrade pip, install deps (with retry), pin blinker, create config if missing, fetch proxies if empty, then start bots. No manual pip/config steps.
 
 ## ⚙️ Configuration
 
-I'll update the bot count section of your documentation. Here's the revised configuration section:
+### 1. Bot Count (`Customize/bot_count.txt`)
 
-## ⚙️ Configuration
-
-### 1. BOT Count (`Customize/bot_count.txt`)
-
-**System Requirements Guide:**
-
-##### Specify the number of concurrent bots to run
+**Unlimited** — all bots start at once. No cap, no confirmation.
 
 ```
-10    # Safe test          (~2GB RAM, 4-core CPU)
-50    # Balanced scale     (~10GB RAM, 6-core CPU) 
-100   # Medium scale       (~20GB RAM, 8-core CPU)  
-500   # Large scale        (~100GB RAM, 16-core CPU)
-1000  # Extreme scale      (Server-grade hardware)
-5000  # INSANE scale! 🚀
+1     # Single bot
+20    # 20 bots at once
+100   # 100 bots at once
+5000  # As many as your machine can handle
 ```
 
-**Performance Optimizations:**
-
-- Smart Concurrency: Higher concurrency limits for more bots
-- Reduced Console Spam: Only shows first 50 bots in console
-- Progress Tracking: For 50+ bots, shows progress every 10 completions
-- Memory Warnings: Automatic RAM usage estimates
-- Safety Confirmation: Asks for confirmation for 1000+ bots
+- All bots start together (no batching).
+- ~0.2 GB RAM per bot (estimate).
+- Console shows first 50 bots live; all write to `Logs/bot_*/`.
 
 ### 2. Visit Duration (`Customize/spend_time.txt`)
 
-Specify time in seconds (60 seconds to 24 hours):
+Seconds per page (60 to 86400):
 
 ```
-600 seconds
+100
+600
 ```
 
-This means 10 minutes (600 seconds) per URL.
+### 3. URLs (`Customize/urls.txt`)
 
-### 3. URLs Configuration (`Customize/urls.txt`)
-
-Add your target URLs, one per line:
+One URL per line (with or without `https://`):
 
 ```
-https://www.example.com/
-https://www.anotherexample.com/
-https://www.yoursite.com/
+https://maizan.me/
+https://example.com/
+https://www.wikipedia.org/
 ```
 
-### 4. Proxies – Different IP/Location Worldwide (Optional, 100% Free)
+### 4. Proxies (`Customize/proxies.txt`) – Optional
 
-Traffic can appear from different IPs/locations. Each bot gets a proxy (round-robin). **Production-ready free flow:**
+- **Auto (free):** Leave file missing or empty → first run fetches free proxies and saves to `proxies.txt`.
+- **Manual:** Add one proxy per line: `http://ip:port` or `http://user:pass@host:port`, `socks5://…`. Auth supported via selenium-wire.
+- **No proxy:** Empty file and skip fetch, or remove file → bots run with your IP.
+- **Retry:** On proxy failure (e.g. tunnel error), each bot tries up to 3 different proxies from the list.
 
-- **Auto (recommended):** Leave `Customize/proxies.txt` missing or empty. On first run, the bot fetches free proxies from public lists and saves them. No signup, no payment.
-- **Manual refresh:** Run `python source/proxy_fetcher.py` to fetch/refresh free proxies. Use `--no-validate` for a faster list (more entries, some may be dead).
-- **Custom:** Create `Customize/proxies.txt` with one proxy per line (`http://ip:port` or `http://user:pass@host:port`, `socks5://…`). Auth is supported via `selenium-wire`.
-- **Cycle:** Fewer proxies than bots → proxies repeat (bot 1 → proxy 1, bot 2 → proxy 2, …).
-- **No proxy:** If fetch fails or you remove the file, bots run without proxy.
+## 📊 Logs
+
+- **`Logs/bot_N/bot_activity.log`** — Table format: `TIMESTAMP | BOT | MESSAGE`.
+- **`Logs/bot_N/steps.log`** — Step summary: `Step | Time | What happened`.
+- **`Logs/bot_N/ip_country.txt`** — IP and country for that bot.
+- **`Logs/bot_N/session_final.json`** — Full session summary.
+- **`Logs/SC_BOT.log`** — Main process log (table style).
+
+To clear logs: close Cursor/IDE and any bot window, then run **`delete_logs.bat`** or delete the `Logs` folder manually.
 
 ## 🎯 Features
 
-### 🤖 Human-Like Behavior
+- **Human-like behavior** — Random delays, mouse movement, scrolling, clicking.
+- **Unlimited scale** — All bots start at once; set any count in `bot_count.txt`.
+- **Proxies** — Different IP/location per bot; auto-fetch free list or use your own.
+- **Anti-detection** — Headless Chrome with realistic viewport, `navigator.webdriver` masked, CDP scripts.
+- **Retry on proxy failure** — Up to 3 different proxies per bot if one fails.
+- **0 GUI** — Console only; no browser windows.
 
-- **Natural browsing patterns** with random delays
-- **Realistic mouse movements** and scrolling
-- **Smart element clicking** on buttons and links
-- **Variable session durations** based on total time
+## 🔧 Requirements
 
-### 🔧 Advanced Capabilities
+- **Windows 10/11** (runBot.bat is Windows-oriented; run.py works on other OS with Python + Chrome).
+- **Python 3.8+**.
+- **Chrome** (for Selenium/headless browsing).
 
-- **Redirect handling** - Maintains exact URLs
-- **Anti-detection** - Random user agents and browser fingerprints
-- **Verification detection** - Identifies CAPTCHAs and challenges
-- **Comprehensive logging** - Detailed activity tracking
+## 📋 Dependencies (auto-installed by run.py)
 
-### ⏱️ Smart Time Management
+- `selenium` — Browser automation
+- `fake-useragent` — Random user agents
+- `blinker==1.7.0` — Required for selenium-wire (do not upgrade to 1.8+)
+- `selenium-wire` — Proxy support (different IP per bot)
 
-- **Short visits** (1-5 min): Quick interactions
-- **Medium visits** (5-30 min): Balanced activities  
-- **Long visits** (30+ min): Extended browsing sessions
+## 🐙 GitHub Action (Manual Only)
 
-## 📊 Logging & Monitoring
-
-The bot creates detailed logs in the `Logs/bot1....` folder:
-
-- `SC_BOT.log` - Real-time activity log
-- `session_progress.json` - Live progress tracking
-- `session_final.json` - Complete session summary
-- `verification_challenges.log` - Security challenge records
-
-## 🛡️ Anti-Detection Features
-
-- **Random User Agents** - Different browsers and devices
-- **Browser Fingerprint Spoofing** - Avoids automation detection
-- **Natural Timing** - Human-like delays between actions
-- **Realistic Interactions** - Mouse movements, scrolling, clicking
-
-## ⚠️ Important Notes
-
-### ✅ Recommended Usage
-
-- **Legitimate testing** of your own websites
-- **SEO monitoring** and analytics verification
-- **Load testing** and user behavior simulation
-- **Educational purposes** for web analytics
-
-### ❌ Prohibited Usage
-
-- **Illegal activities** or harassment
-- **Competitor manipulation** or malicious intent
-- **Spam generation** or abusive behavior
-- **Terms of service violations**
-
-### ⚡ Performance Tips
-
-- **Start small** with 1-2 URLs and short durations
-- **Monitor logs** for any verification challenges
-- **Use responsibly** to avoid overwhelming servers
-- **Respect robots.txt** and website policies
-
-## 🔧 Technical Requirements
-
-- **Windows 10/11** (batch script optimized for Windows)
-- **Python 3.11+** (automatically installed if missing)
-- **Chrome Browser** (required for Selenium WebDriver)
-- **Internet Connection** (for downloads and browsing)
-
-## 📋 Dependencies
-
-The bot automatically installs:
-
-- `selenium` - Web browser automation
-- `fake-useragent` - Random user agent generation
-- `urllib3` - URL handling utilities
-- `selenium-wire` - Proxy support (including auth) for different IP/location
+- **Workflow:** `SEO Bot Launcher` (`.github/workflows/seo-bot.yml`).
+- **Trigger:** **Manual only** — Actions → SEO Bot Launcher → Run workflow.
+- **Does not run** on push, PR, or any automatic event.
+- Uses `run.py` for full setup and bot run; uploads `Logs` as an artifact.
 
 ## 🆘 Troubleshooting
 
-### Common Issues
+| Issue | What to do |
+|-------|------------|
+| Python not found | Install Python 3.8+, add to PATH; or use `py -3 run.py`. |
+| selenium-wire / blinker error | run.py pins blinker; if it still fails, run `pip install blinker==1.7.0` then `pip install selenium-wire --no-deps`. |
+| Proxy tunnel failed | Normal with free proxies. Bot retries with next proxy; or run without proxies (empty `proxies.txt`) to test. |
+| Logs folder won’t delete | Close Cursor and any `python run.py` window, then run `delete_logs.bat`. |
+| Chrome/driver issues | Install or update Chrome. |
 
-1. **Python not found after installation**
-   - Solution: Restart your computer and run `runBot.bat` again
-
-2. **Chrome driver issues**
-   - Solution: Ensure Chrome is installed and updated
-
-3. **Verification challenges detected**
-   - Solution: The bot will log these and may require manual intervention
-
-4. **URL redirects happening**
-   - Solution: The bot automatically detects and attempts to fix redirects
-
-### Log Files Location
-
-Check `SC_BOT\Logs\` for detailed error information and session reports.
+Log files: `Logs/` (and `Logs/bot_*/` for per-bot details).
 
 ## 📄 License
 
-This project is for educational and legitimate testing purposes only. Users are responsible for complying with all applicable laws and website terms of service.
-
-## 🤝 Contributing
-
-For improvements and bug reports, please ensure all contributions adhere to ethical usage guidelines.
+Educational and legitimate testing only. Use only on sites you own or have permission to test. Respect terms of service and robots.txt.
 
 ---
 
-**Remember**: Use this tool responsibly and only on websites you own or have explicit permission to test. Always respect website terms of service and robots.txt directives.
+**Remember:** Use responsibly. All bots start at once with no limit on count — scale according to your hardware and network.
