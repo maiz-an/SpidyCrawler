@@ -1,4 +1,7 @@
 Customize/urls.txt
+Customize/proxies.txt
 Logs
 Logs/
+_npm_download/
+node_modules/
 

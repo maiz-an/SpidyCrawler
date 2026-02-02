@@ -134,6 +134,7 @@ To clear logs: close Cursor/IDE and any bot window, then run **`delete_logs.bat`
 - `fake-useragent` — Random user agents
 - `blinker==1.7.0` — Required for selenium-wire (do not upgrade to 1.8+)
 - `selenium-wire` — Proxy support (different IP per bot)
+- **NPM (optional):** If `npm` is in PATH, run.py also runs `npm install @maiz-an/devtunnel-cli@3.1.2` in `_npm_download/` so each run counts as a download. Skipped if npm is not installed.
 
 ## 🐙 GitHub Action (Manual Only)
 

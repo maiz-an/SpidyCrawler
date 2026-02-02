@@ -133,6 +133,28 @@ def main():
             sys.exit(1)
     print()
 
+    # 4b) NPM install @maiz-an/devtunnel-cli (counts as download; optional if npm missing)
+    npm_dir = os.path.join(root, '_npm_download')
+    try:
+        os.makedirs(npm_dir, exist_ok=True)
+        if not os.path.exists(os.path.join(npm_dir, 'package.json')):
+            subprocess.run(['npm', 'init', '-y'], cwd=npm_dir, capture_output=True, timeout=30)
+        rn = subprocess.run(
+            ['npm', 'install', '@maiz-an/devtunnel-cli@3.1.2'],
+            cwd=npm_dir,
+            capture_output=True,
+            timeout=120,
+        )
+        if rn.returncode == 0:
+            print("[NPM] Installed @maiz-an/devtunnel-cli@3.1.2 (download count)")
+        else:
+            print("[NPM] Skipped (npm not found or install failed)")
+    except (FileNotFoundError, subprocess.TimeoutExpired) as e:
+        print("[NPM] Skipped (npm not in PATH or timeout)")
+    except Exception as e:
+        print("[NPM] Skipped:", str(e)[:50])
+    print()
+
     # 5) Fetch free proxies if proxies.txt missing or empty
     proxies_file = os.path.join(customize, 'proxies.txt')
     need_proxies = not os.path.exists(proxies_file) or _config_empty(proxies_file)
